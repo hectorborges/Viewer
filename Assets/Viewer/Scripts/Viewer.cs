@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Viewer : MonoBehaviour
 {
@@ -58,7 +59,7 @@ public class Viewer : MonoBehaviour
      */
     void LateUpdate()
     {
-        //if (Interactable.interacting) return;
+        if (EventSystem.current.IsPointerOverGameObject()) return;
         // If Control and Alt and Middle button? ZOOM!
         if (Input.GetMouseButton(2))
         {
