@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: AMALFI COAST
+  m_Name: Amber Cherry
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -24,7 +24,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 3, y: 2}
         m_Offset: {x: 0, y: 0}
     - _DetailMask:
         m_Texture: {fileID: 0}
@@ -36,14 +36,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Scale: {x: 3, y: 3}
+        m_Offset: {x: 1.96, y: -0.18}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 40f27922597da6640b193879b71812af, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Texture: {fileID: 2800000, guid: a0d3a72b07822e8458fec77b247f59ed, type: 3}
+        m_Scale: {x: 3, y: 3}
+        m_Offset: {x: 1.96, y: -0.18}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 652c921f66408fa41a3831bf9e0495ec, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -59,10 +59,10 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _GlossMapScale: 1
-    - _Glossiness: 0.871
+    - _GlossMapScale: 0.56
+    - _Glossiness: 0.708
     - _GlossyReflections: 1
-    - _Metallic: 0
+    - _Metallic: 0.23
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
