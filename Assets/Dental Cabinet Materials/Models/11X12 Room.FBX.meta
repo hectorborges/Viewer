@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 43950c5d27db92b4ab605f8811df5232
+guid: 72199cc80a64aac42960285b3851d0e9
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -9,8 +9,8 @@ ModelImporter:
     400000: //RootNode
     400002: Box347
     400004: Floor
-    2100000: Floor
-    2100002: Walls
+    2100000: Walls
+    2100002: Floor
     2300000: Box347
     2300002: Floor
     3300000: Box347
