@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 
 public class Viewer : MonoBehaviour
 {
+    public static Viewer Instance;
     public Transform target;
     public Vector3 targetOffset;
     public float distance = 5.0f;
@@ -30,15 +31,27 @@ public class Viewer : MonoBehaviour
     void Start() { Init(); }
     void OnEnable() { Init(); }
 
+    bool initialized;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+    public void UpdateTarget(Transform newTarget)
+    {
+        target = newTarget;
+    }
+
     public void Init()
     {
         //If there is no target, create a temporary target at 'distance' from the cameras current viewpoint
-        if (!target)
-        {
-            GameObject go = new GameObject("Cam Target");
-            go.transform.position = transform.position + (transform.forward * distance);
-            target = go.transform;
-        }
+        //if (!target)
+        //{
+        //    GameObject go = new GameObject("Cam Target");
+        //    go.transform.position = transform.position + (transform.forward * distance);
+        //    target = go.transform;
+        //}
 
         distance = Vector3.Distance(transform.position, target.position);
         currentDistance = distance;
@@ -52,6 +65,7 @@ public class Viewer : MonoBehaviour
 
         xDeg = Vector3.Angle(Vector3.right, transform.right);
         yDeg = Vector3.Angle(Vector3.up, transform.up);
+        initialized = true;
     }
 
     /*
@@ -59,6 +73,16 @@ public class Viewer : MonoBehaviour
      */
     void LateUpdate()
     {
+        if (ViewChanger.Instance.ChangingView)
+        {
+            initialized = false;
+            return;
+        }
+        if(!initialized)
+        {
+            Init();
+            return;
+        }
         if (EventSystem.current.IsPointerOverGameObject()) return;
         // If Control and Alt and Middle button? ZOOM!
         if (Input.GetMouseButton(2))
