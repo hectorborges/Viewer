@@ -3261,6 +3261,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 512b34c9f48d002478842429185d1fe7, type: 2}
+    - target: {fileID: 100000, guid: 12bd0d6bdd41b1c44aa4cd1f8112f9f6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12bd0d6bdd41b1c44aa4cd1f8112f9f6, type: 3}
   m_IsPrefabAsset: 0
@@ -4218,6 +4222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   page: {fileID: 1009852868886264, guid: 3428b66de5708cd4e9ca4255932a9b3d, type: 2}
   templatesPerPage: 21
+  pages: []
 --- !u!23 &508401337 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 2300002, guid: 407e3fefed97da9478f5f26b37dc76ed,
@@ -6780,6 +6785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   page: {fileID: 1009852868886264, guid: 3428b66de5708cd4e9ca4255932a9b3d, type: 2}
   templatesPerPage: 21
+  pages: []
 --- !u!1 &717296533
 GameObject:
   m_ObjectHideFlags: 0
@@ -9774,6 +9780,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   page: {fileID: 1009852868886264, guid: 3428b66de5708cd4e9ca4255932a9b3d, type: 2}
   templatesPerPage: 21
+  pages: []
 --- !u!23 &1033771412 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 2300000, guid: 2d38bbc3b8cca5d4ab82f27e575b3e0a,
@@ -10832,6 +10839,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   page: {fileID: 1009852868886264, guid: 3428b66de5708cd4e9ca4255932a9b3d, type: 2}
   templatesPerPage: 21
+  pages: []
 --- !u!1 &1114936981
 GameObject:
   m_ObjectHideFlags: 0
@@ -11995,6 +12003,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   page: {fileID: 1009852868886264, guid: 3428b66de5708cd4e9ca4255932a9b3d, type: 2}
   templatesPerPage: 21
+  pages: []
 --- !u!23 &1204355576 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 2300008, guid: 856de5567c49eaa44b3deecb52d0d7c5,
@@ -12406,7 +12415,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1761705325}
+      - m_Target: {fileID: 1029018661}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -16264,6 +16273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   page: {fileID: 1009852868886264, guid: 3428b66de5708cd4e9ca4255932a9b3d, type: 2}
   templatesPerPage: 21
+  pages: []
 --- !u!1 &1727017984
 GameObject:
   m_ObjectHideFlags: 0
@@ -16415,6 +16425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   page: {fileID: 1009852868886264, guid: 3428b66de5708cd4e9ca4255932a9b3d, type: 2}
   templatesPerPage: 21
+  pages: []
 --- !u!23 &1765587472 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 2300000, guid: 12bd0d6bdd41b1c44aa4cd1f8112f9f6,
@@ -18167,6 +18178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   page: {fileID: 1009852868886264, guid: 3428b66de5708cd4e9ca4255932a9b3d, type: 2}
   templatesPerPage: 21
+  pages: []
 --- !u!1 &1936962101
 GameObject:
   m_ObjectHideFlags: 0
