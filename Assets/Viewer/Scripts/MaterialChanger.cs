@@ -6,16 +6,30 @@ public class MaterialChanger : MonoBehaviour
 {
     public Renderer[] renderersToChange;
     public Material[] possibleMaterials;
-    public Transform parentTransform;
     public MaterialTemplate materialTemplate;
     public bool canBeColored;
 
+    int templateCount;
+    int currentPage;
+
+    Pages pages;
+
     public void Start()
     {
+        pages = GetComponent<Pages>();
         foreach(Material material in possibleMaterials)
         {
-            MaterialTemplate newMaterialTemplate = Instantiate(materialTemplate, parentTransform);
-            newMaterialTemplate.Initialize(this, material);
+            if(templateCount < pages.templatesPerPage)
+            {
+                templateCount++;
+                MaterialTemplate newMaterialTemplate = Instantiate(materialTemplate, pages.GetPage(currentPage));
+                newMaterialTemplate.Initialize(this, material);
+            }
+            else
+            {
+                templateCount = 0;
+                currentPage++;
+            }
         }
     }
 
