@@ -4,24 +4,18 @@ using UnityEngine;
 
 public class MaterialChanger : MonoBehaviour
 {
-    public static MaterialChanger instance;
     public Renderer[] renderersToChange;
     public Material[] possibleMaterials;
     public Transform parentTransform;
     public MaterialTemplate materialTemplate;
     public bool canBeColored;
 
-    private void Awake()
-    {
-        instance = this;
-    }
-
     public void Start()
     {
         foreach(Material material in possibleMaterials)
         {
             MaterialTemplate newMaterialTemplate = Instantiate(materialTemplate, parentTransform);
-            newMaterialTemplate.Initialize(material);
+            newMaterialTemplate.Initialize(this, material);
         }
     }
 

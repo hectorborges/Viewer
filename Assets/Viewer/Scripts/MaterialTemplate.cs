@@ -8,15 +8,17 @@ public class MaterialTemplate : MonoBehaviour
     public RawImage exampleImage;
 
     Material currentMaterial;
+    MaterialChanger materialChanger;
 
-    public void Initialize(Material material)
+    public void Initialize(MaterialChanger newMaterialChanger, Material material)
     {
         currentMaterial = material;
         exampleImage.texture = currentMaterial.mainTexture;
+        materialChanger = newMaterialChanger;
     }
 
     public void SetMaterial()
     {
-        MaterialChanger.instance.ChangeMaterial(currentMaterial);
+        materialChanger.ChangeMaterial(currentMaterial);
     }
 }
