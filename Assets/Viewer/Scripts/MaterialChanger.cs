@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class MaterialChanger : MonoBehaviour
 {
+    public TextMeshProUGUI selectedTexture;
     public Renderer[] renderersToChange;
     public Material[] possibleMaterials;
     public MaterialTemplate materialTemplate;
@@ -31,13 +33,19 @@ public class MaterialChanger : MonoBehaviour
                 currentPage++;
             }
         }
+
+        string name = renderersToChange[0].material.name;
+        name = name.Substring(0, name.Length - 10);
+        selectedTexture.text = name;
     }
 
     public void ChangeMaterial(Material newMaterial)
     {
         foreach(Renderer renderer in renderersToChange)
-        {
             renderer.material = newMaterial;
-        }
+
+        string name = renderersToChange[0].material.name;
+        name = name.Substring(0, name.Length - 10);
+        selectedTexture.text = name;
     }
 }
