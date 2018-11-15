@@ -28,6 +28,8 @@ public class Viewer : MonoBehaviour
     private Quaternion rotation;
     private Vector3 position;
 
+    public ToggleMenu toggleMenu;
+
     void Start() { Init(); }
     void OnEnable() { Init(); }
 
@@ -84,6 +86,8 @@ public class Viewer : MonoBehaviour
             return;
         }
         if (EventSystem.current.IsPointerOverGameObject()) return;
+        else if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Mouse1) || Input.GetAxis("Mouse ScrollWheel") != 0)
+            toggleMenu.Close();
         // If Control and Alt and Middle button? ZOOM!
         if (Input.GetMouseButton(2))
         {

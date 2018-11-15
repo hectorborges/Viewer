@@ -24,4 +24,17 @@ public class ToggleMenu : MonoBehaviour
         closeImage.SetActive(opened);
         animator.SetBool("Opened", opened);
     }
+
+    public void Close()
+    {
+        if (!triggered)
+        {
+            triggered = true;
+            animator.SetTrigger("Triggered");
+        }
+        opened = false;
+        openImage.SetActive(!opened);
+        closeImage.SetActive(opened);
+        animator.SetBool("Opened", opened);
+    }
 }
